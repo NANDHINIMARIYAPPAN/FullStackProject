@@ -42,14 +42,14 @@ const getContactUs = async (req, res) => {
     try {
         let data = await contactModel.find({})
        
-    //    await res.status(200).json({
-    //         status: 200,
-    //         isSuccessful: true,
-    //         message: 'Data retrieved successfully',
-    //         data: data
-    //     })
+       await res.status(200).json({
+            status: 200,
+            isSuccessful: true,
+            message: 'Data retrieved successfully',
+            data: data
+        })
 
-        await res.render('pages/index', { data: data })
+        // await res.render('pages/index', { data: data })
     } catch (err) {
         res.json({
             status: 500,
