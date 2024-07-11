@@ -31,7 +31,9 @@ const port = 9876
 
 app.set('views', path.join(global.__basedir, 'views'));
 app.set('view engine', 'ejs');
-
+app.get('/', (req, res) => {
+    console.log("hello")
+})
 app.listen(port, () => {
     console.log(`server running on :${port}`);
 })  
