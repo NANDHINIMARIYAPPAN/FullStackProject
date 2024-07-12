@@ -2,17 +2,17 @@
     "version": 2,
     "builds": [
         {
-            "src": "backend/index.js",
+            "src": "/(.*)",
             "use": "@vercel/node"
         }
     ],
     "routes": [
         {
-            "src": "/api/getcontactUs",
+            "src": "api/*.js",
             "dest": "backend/index.js"
         },
         {
-            "src": "/api/contactUs",
+            "src": "api/*.js",
             "dest": "backend/index.js"
         },
         {
